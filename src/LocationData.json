@@ -1,0 +1,83 @@
+[{
+    "id": 1,
+    "title": "Intramuros",
+    "content": "populary know as Fort Santiago.",
+    "location": {
+        "lat": 14.595186,
+        "lng": 120.969500
+    }
+  },
+  {
+    "id": 2,
+    "title": "Rizal Park",
+    "content": "Visit where Jose Rizal was executed.",
+    "location": {
+        "lat": 14.583118,
+        "lng": 120.979417 
+    }
+  },
+  {
+    "id": 3,
+    "title": "Manila Cathedral",
+    "content": "One of the most beautiful churches.",
+    "location": {
+        "lat":  14.591528,
+        "lng": 120.973635
+    }
+  },
+  {
+    "id": 5,
+    "title": "Paco Park",
+    "content": "Relax and unwind in the one of the oldest park.",
+    "location": {
+        "lat": 14.580965,
+        "lng": 120.988424
+    }
+  },
+  {
+    "id": 6,
+    "title": "Manila Ocean Park",
+    "content": "See the beauty of marine animals",
+    "location": {
+        "lat": 14.579156,
+        "lng": 120.97255
+    }
+  },
+  {
+    "id": 7,
+    "title": "Malate Church",
+    "content": "One of the oldest church in the Philippines.",
+    "location": {
+        "lat": 14.569281,
+        "lng": 120.984643
+    }
+  },
+  {
+    "id": 8,
+    "title": "Quiapo Church",
+    "content": "One of the oldest church in the Philippines.",
+    "location": {
+        "lat": 14.598772,
+        "lng": 120.983796
+    }
+  },
+  {
+    "id": 9,
+    "title": "Manila Zoo",
+    "content": "Animal attraction for the kids.",
+    "location": {
+        "lat": 14.565137,
+        "lng": 120.988525
+    }
+  },
+  {
+    "id": 10, 
+    "title": "Binondo Church",
+    "content": "One of the oldest churches.",
+    "location": {
+        "lat": 14.600003,
+        "lng": 120.974513
+    }
+  }
+  
+  ]

@@ -1,0 +1,177 @@
+@charset "utf-8";
+
+.App {
+  text-align: center;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: Arial, sans-serif;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.app {
+    height: 100%;
+}
+
+/* HEADER STYLES */
+header {
+    margin: auto;
+    display: flex;
+    background-color: #192a56;
+    height: 5em;
+    padding: 20px;
+}
+
+h1 {
+    margin: 0 auto;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+/* HAMBURGER MENU ICON */
+.menu {
+    width: 40px;
+}
+
+.menu span {
+    background-color: #faf4f4;
+    display: block;
+    width: 25px;
+    margin: 4px;
+    height: 4px;
+    border-radius: 5px;
+}
+
+
+/* MAP Styles */
+.map {
+    background-color: #dbcece;
+    height: 100vh;
+    width: Calc(80vw - 43px);
+    position: relative;
+    overflow: hidden;
+}
+
+.fullMap {
+  width: 100vw;
+  height: 100vh;
+}
+
+/* SIDEBAR STYLES */
+.sidebar {
+    width: 300px;
+    height: 100%;
+    top: 0;
+    background-color: #f1f1f1;
+    z-index: 10;
+    display: block;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s;
+    font-size: inherit;
+}
+
+input {
+    height: 3em;
+    width: 100%;
+    padding: 1em;
+    color: darkolivegreen;
+    font-weight: 900;
+    border: 1px lightgray solid;
+}
+
+.nav {
+    margin: 20px auto;
+}
+
+.nav.hidden {
+  width: 0;
+  display: none;
+  left: -3300px;
+}
+
+
+.nav>li>button {
+    height: 4em;
+    width: 100%;
+    color: #fff;
+    background-color: #487eb0;
+    font-weight: 700;
+    border-width: 1px 0;
+}
+
+.nav>li>button:hover {
+    background-color: darkorange;
+    height: 5em;
+    font-size: 1em;
+}
+
+/* MAIN Container for the sidebar and map */
+
+.main {
+    height: 100%;
+    display: flex;
+}
+
+
+/* FOOTER STYLES */
+footer {
+    width: inherit;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    background-color: #c23616;
+    font-size: .6em;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+}
+
+footer h2 {
+    margin: auto;
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
+
+footer p {
+    margin: 0 auto;
+    padding-top: 0;
+    font-size: 1.5em;
+}
+
+.hidden {
+  width: 0;
+  display: none;
+  left: -3300px;
+}
+
+.notify {
+    text-align: center;
+    color: rebeccapurple;
+    margin: 15px auto;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 550px) {
+	h1 {
+		font-size: 1em;
+    }
+    
+    .infoWindow {
+        max-width: 200px;
+    }
+}
