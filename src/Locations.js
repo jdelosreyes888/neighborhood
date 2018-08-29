@@ -50,11 +50,11 @@ import Container from './Container'
     return (
       <div className="main">
       <aside className={this.props.menu === true? "sidebar" : "hidden"} >
-    
-      <ul className="nav" >
-        <input type='text' placeholder='Search for historical places' value={this.state.query}
+      
+      <input type='text' placeholder='Search for historical places' value={this.state.query}
             onChange={(event) => this.updateQuery(event.target.value)} tabIndex={this.props.menu === true? '0' : '-1'} aria-label="Filter locations"/>
-           
+      
+      <ul className="nav" >        
            {showingLocations.length === 0? <p className="notify">{notify}</p> : 
             showingLocations.map((location) => (
                 <li key={location.id}>
@@ -71,6 +71,7 @@ import Container from './Container'
      <Container locations={showingLocations} 
         setMarkers={this.setMarkers}
         menu={this.props.menu}
+        issue={this.props.issue}
         />
     </div>
     )
