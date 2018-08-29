@@ -86,6 +86,7 @@ h1 {
 }
 
 input {
+    margin-top: 10px;
     height: 3em;
     width: 100%;
     padding: 1em;
@@ -174,4 +175,35 @@ footer p {
     .infoWindow {
         max-width: 200px;
     }
+}
+
+/*
+/* ERROR message
+*/
+
+.error {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: lightblue;
+    padding: 1em;
+    display: flex;
+    color: darkgreen;
+    flex-direction: column;
+    justify-content: start;
+  }
+
+  .error p{
+    margin: 5px auto;
+    text-transform: uppercase;
+    width: 50%;
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+
+  .error-icon {
+      margin: 20px auto;  
+      padding: 0;
+      align-self: center;
+      width: 10%;
 }
