@@ -7,12 +7,27 @@ import Locations from './Locations'
 class App extends Component {
   state = {
     locations: [],
-    sidebarShow: true
+    sidebarShow: true,
+    issue: true
   }
 
   // Prepare the locations array
   componentDidMount() {
     this.addWikiContents();
+    this.mapsLoaded();
+  }
+
+  // Checking if map frame loaded correctly
+  mapsLoaded = () => {
+    setTimeout(() => {
+      const mapContent = document.querySelector('iframe');
+
+      if (!mapContent) {
+        let issue = this.state.issue;
+        issue = false;
+        this.setState({ issue })
+      }
+    }, 3000);
   }
 
   addWikiContents = () => {
@@ -45,8 +60,9 @@ class App extends Component {
           .catch(error => {
 
             // Push specific message to <DetailsPage/> of each location item
-            let content = `<p>Sorry, there is an error loading information about ${query}. Find out some information on Wikipedia by clicking <a href="https://en.wikipedia.org/wiki/${query}" target="_blank">here</a>.</p>`;
+            let content = `Sorry, there was an error loading information about ${query}. Find out more information on Wikipedia`;
             infoData.push(content);
+            wikisource.push("https://en.wikipedia.org");
         })
 
       location['wiki'] = infoData;
@@ -72,7 +88,7 @@ class App extends Component {
             </nav>
             <h1>Places to Visit In Manila</h1>
         </header>
-          <Locations locations={this.state.locations} menu={this.state.sidebarShow}/>     
+          <Locations locations={this.state.locations} menu={this.state.sidebarShow} issue={this.state.issue}/>     
         
       </div> 
     );
