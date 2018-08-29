@@ -1,5 +1,6 @@
 import  React, { Component } from 'react'
 import './Infowindow.css'
+import errorIcon from './error.svg'
 
 // credit: https://github.com/fullstackreact/google-maps-react
 import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react';
@@ -9,7 +10,7 @@ export class Container extends Component {
   state = {
     showingInfoWindow: false,
     activeMarker: {},
-    selectedPlace: {},
+    selectedPlace: {}
   };
   
   onMarkerClick = (props, marker, e) =>
@@ -18,7 +19,6 @@ export class Container extends Component {
     activeMarker: marker,
     showingInfoWindow: true
 });
-
 
    render() {
         const style = {
@@ -45,7 +45,8 @@ export class Container extends Component {
               content={location.content}
               wiki={location.wiki}
               wikisource={location.wikisource}
-              position={{lat: location.location.lat, lng: location.location.lng }}  
+              position={{lat: location.location.lat, lng: location.location.lng }} 
+              animation={(this.state.selectedPlace.title === location.title) && this.props.google.maps.Animation.BOUNCE} 
               ref={this.props.setMarkers}
               aria-label="Location marker"/>
           ))
@@ -67,6 +68,17 @@ export class Container extends Component {
         </InfoWindow>
   
         </Map>
+
+        { /* Notify the user that there was an error in loading Google Map*/ }
+        { /* Error SVG file downloaded from https://www.flaticon.com/free-icon/error-triangle_9188# */}
+        {
+          this.props.issue ? null : ( 
+            <div className = "error" >
+            <img src={errorIcon} className="error-icon" alt="error info"/><p>Kindly refresh the app.There was an error loading Google map.</p> 
+            </div>
+          )
+        }
+
       </main>
       )
     }
